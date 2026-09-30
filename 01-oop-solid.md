@@ -1,4 +1,4 @@
-# Chapter 1 - OOP, SOLID & Clean Object Design
+# Chapter 1 - OOP SOLID
 
 ## Learning Objectives
 

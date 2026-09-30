@@ -1,4 +1,4 @@
-# Chapter 7 - Java Memory Model (JMM) Complete Edition
+# Chapter 8 - Java Memory Model
 
 ## Learning Objectives
 

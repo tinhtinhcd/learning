@@ -1,4 +1,4 @@
-# Chapter 17 - Kubernetes, Cloud Native & Platform Engineering (Principal Engineer Edition)
+# Chapter 27 - Kubernetes Cloud Native Platform Engineering
 
 ## Learning Objectives
 

@@ -1,4 +1,4 @@
-# Chapter 9 - Spring Core (Complete Senior Edition)
+# Chapter 11 - Spring Core
 
 ## Learning Objectives
 

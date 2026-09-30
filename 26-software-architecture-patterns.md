@@ -1,4 +1,4 @@
-# Chapter 18 - Software Architecture Patterns (Principal Engineer Edition)
+# Chapter 26 - Software Architecture Patterns
 
 ## Learning Objectives
 

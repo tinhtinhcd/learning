@@ -1,4 +1,4 @@
-# Chapter 12 - Spring Data JPA & Hibernate (Complete Senior Edition)
+# Chapter 16 - Spring Data JPA Hibernate
 
 ## Learning Objectives
 

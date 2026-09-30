@@ -1,4 +1,4 @@
-# Chapter 8 - ClassLoader, Reflection & Bytecode (Complete Senior Edition)
+# Chapter 9 - Classloader Reflection Bytecode
 
 ## Learning Objectives
 

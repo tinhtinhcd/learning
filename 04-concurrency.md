@@ -1,4 +1,4 @@
-# Chapter 4 - Concurrency (Advanced Edition)
+# Chapter 4 - Concurrency
 
 ## Learning Objectives
 

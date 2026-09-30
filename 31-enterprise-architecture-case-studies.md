@@ -1,4 +1,4 @@
-# Chapter 21 - Enterprise Architecture Case Studies (Principal Engineer Edition)
+# Chapter 31 - Enterprise Architecture Case Studies
 
 ## Learning Objectives
 

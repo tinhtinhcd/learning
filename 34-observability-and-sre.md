@@ -1,4 +1,4 @@
-# Chapter 34 - Observability and SRE Masterclass
+# Chapter 34 - Observability And SRE
 
 ## Learning Objectives
 

@@ -1,1079 +1,356 @@
-# Chapter 08.1 - Design Patterns & Architectural Patterns Masterclass
+# Chapter 10 - Design Patterns Masterclass 
 
+## How To Study This Chapter
 
-## 1. Foundations and SOLID
+For each pattern:
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+1. Problem Statement
+2. Mermaid Diagram
+3. Java Example
+4. Sequence Flow
+5. Real World Usage
+6. Interview Notes
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Builder Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Too many constructor parameters.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+User user = new User("Tinh","Ly","Van","VN","Bac Ninh");
 ```
 
+## Diagram
 
-## 2. Singleton
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+classDiagram
+class User
+class UserBuilder
+UserBuilder --> User
 ```
 
+## Code
 
-## 3. Factory Method
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+User user = User.builder()
+    .firstName("Tinh")
+    .lastName("Ly")
+    .build();
 ```
 
+## Real Project
 
-## 4. Abstract Factory
+- DTO creation
+- Configuration objects
+- Spring builders
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Factory Method Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Create objects without exposing creation logic.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+classDiagram
+class Payment
+class PaypalPayment
+class MomoPayment
+class PaymentFactory
+PaymentFactory --> Payment
 ```
 
-
-## 5. Builder
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+Payment payment = factory.create("PAYPAL");
 ```
 
+## Usage
 
-## 6. Prototype
+- Spring BeanFactory
+- JDBC Drivers
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Singleton Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Need exactly one instance.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+classDiagram
+class ConfigManager {
+ +getInstance()
+}
 ```
 
-
-## 7. Adapter
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+public enum ConfigManager {
+ INSTANCE;
+}
 ```
 
+## Usage
 
-## 8. Facade
+- Logger
+- Cache Manager
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Adapter Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Integrate incompatible APIs.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+classDiagram
+class PaymentService
+class PaypalSDK
+class PaypalAdapter
+PaymentService <|.. PaypalAdapter
+PaypalAdapter --> PaypalSDK
 ```
 
-
-## 9. Proxy
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+adapter.pay();
 ```
 
-
-## 10. Decorator
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+sequenceDiagram
+Client->>Adapter: pay()
+Adapter->>PaypalSDK: execute()
 ```
 
+## Usage
 
-## 11. Composite
+- Legacy integration
+- SAP integration
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Facade Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Hide complex subsystem.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart LR
+Client --> Facade
+Facade --> ServiceA
+Facade --> ServiceB
+Facade --> ServiceC
 ```
 
-
-## 12. Bridge
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+orderFacade.placeOrder();
 ```
 
+---
 
-## 13. Flyweight
+# Proxy Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Add control before accessing target.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart LR
+Client --> Proxy
+Proxy --> RealService
 ```
 
+Examples:
 
-## 14. Strategy
+- Spring AOP
+- JDK Dynamic Proxy
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Decorator Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Add behavior dynamically.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart LR
+Coffee --> MilkDecorator
+MilkDecorator --> SugarDecorator
 ```
 
-
-## 15. Observer
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+coffee = new SugarDecorator(
+           new MilkDecorator(coffee));
 ```
 
+---
 
-## 16. Template Method
+# Strategy Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Switch algorithms at runtime.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart TD
+PaymentService --> CreditCardStrategy
+PaymentService --> PaypalStrategy
+PaymentService --> MomoStrategy
 ```
 
-
-## 17. Command
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+strategy.pay();
 ```
 
+## Usage
 
-## 18. State
+- Payment methods
+- Sorting algorithms
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Observer Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Notify multiple services when event occurs.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart LR
+OrderCreated --> EmailService
+OrderCreated --> SMSService
+OrderCreated --> AuditService
 ```
 
+## Usage
 
-## 19. Mediator
+- Event Driven Architecture
+- Spring Events
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Command Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Encapsulate request as object.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart LR
+Client --> Command
+Command --> Receiver
 ```
 
+Example:
 
-## 20. Chain of Responsibility
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
 ```java
-// illustrative example
-public class Example {}
+command.execute();
 ```
 
+---
 
-## 21. Iterator
+# Template Method Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Reuse common workflow.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart TD
+Validate --> Process
+Process --> Save
+Save --> Notify
 ```
 
+Subclass customizes steps.
 
-## 22. Visitor
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# Chain of Responsibility
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Pass request through handlers.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+flowchart LR
+Request --> Auth
+Auth --> Validation
+Validation --> Business
 ```
 
+Usage:
 
-## 23. Memento
+- Spring Security Filter Chain
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+---
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+# State Pattern
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+## Problem
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
+Behavior changes based on current state.
 
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
+```mermaid
+stateDiagram-v2
+[*] --> Created
+Created --> Paid
+Paid --> Shipped
+Shipped --> Delivered
 ```
 
-
-## 24. Repository
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 25. Service Layer
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 26. DTO
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 27. Specification
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 28. Unit Of Work
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 29. Dependency Injection
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 30. CQRS
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 31. Saga
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 32. Outbox
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 33. Circuit Breaker
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 34. Bulkhead
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 35. Retry
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 36. Idempotency
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 37. Layered Architecture
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 38. Hexagonal Architecture
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 39. Clean Architecture
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 40. Onion Architecture
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 41. DDD
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 42. EDA
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 43. Microservices
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 44. Serverless
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 45. API First
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 46. Spring Pattern Mapping
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 47. Case Studies
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 48. Anti Patterns
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
-
-
-## 49. Interview Questions and Answers
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-This section explains the intent, motivation, structure, advantages, disadvantages, trade-offs, implementation guidance, interview discussions, and real-world usage. For Java and Spring Boot systems, understand when to apply the pattern, when to avoid it, how it affects coupling, cohesion, maintainability, scalability, observability, and testing. A senior engineer should recognize the problem first and then select the pattern. A common mistake is applying patterns prematurely. In enterprise systems, every pattern introduces benefits and complexity. Therefore decisions should be based on business value, team maturity, operational cost, and long-term maintenance.
-
-
-### Example
-```java
-// illustrative example
-public class Example {}
-```
+Examples:
+
+- Order lifecycle
+
+---
+
+# Pattern Selection Guide
+
+| Scenario | Pattern |
+|-----------|----------|
+| Complex Object Creation | Builder |
+| Runtime Algorithm | Strategy |
+| Event Notification | Observer |
+| Legacy Integration | Adapter |
+| Simplified API | Facade |
+| Access Control | Proxy |
+| Workflow Reuse | Template Method |
+| Request Pipeline | Chain of Responsibility |
+
+---
+
+# Senior Java Interview Questions
+
+1. Strategy vs State?
+2. Adapter vs Facade?
+3. Proxy vs Decorator?
+4. Why Builder over Constructor?
+5. Where does Spring use Factory?
+6. Where does Spring use Proxy?
+7. Observer vs Event Driven?
+8. Explain Filter Chain pattern.
+
+---
+
+# Architect Checklist
+
+✅ Singleton
+✅ Factory
+✅ Builder
+✅ Adapter
+✅ Facade
+✅ Proxy
+✅ Decorator
+✅ Strategy
+✅ Observer
+✅ Command
+✅ Template Method
+✅ State
+✅ Chain of Responsibility

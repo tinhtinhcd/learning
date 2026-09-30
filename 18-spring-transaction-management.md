@@ -1,4 +1,4 @@
-# Chapter 13 - Spring Transaction Management (Complete Architect Edition)
+# Chapter 18 - Spring Transaction Management
 
 ## Learning Objectives
 

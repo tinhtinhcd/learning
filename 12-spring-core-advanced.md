@@ -1,4 +1,4 @@
-# Chapter 09.1 - Spring Core Advanced Internals
+# Chapter 12 - Spring Core Advanced
 
 ## Learning Objectives
 

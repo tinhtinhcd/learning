@@ -1,4 +1,4 @@
-# Chapter 37 - Enterprise Integration Patterns (Complete Edition)
+# Chapter 37 - Enterprise Integration Patterns
 
 ## Learning Objectives
 

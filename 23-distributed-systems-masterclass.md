@@ -1,4 +1,4 @@
-# Chapter 15 - Distributed Systems & System Design (Principal Engineer Edition)
+# Chapter 23 - Distributed Systems Masterclass
 
 ## Learning Objectives
 

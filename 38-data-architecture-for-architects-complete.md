@@ -1,4 +1,4 @@
-# Chapter 38 - Data Architecture for Architects (Complete Edition)
+# Chapter 38 - Data Architecture For Architects Complete
 
 ## Learning Objectives
 

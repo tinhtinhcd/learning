@@ -1,4 +1,4 @@
-# Chapter 23 - Engineering Management for Technical Leaders
+# Chapter 32 - Engineering Management For Technical Leaders
 
 ## Learning Objectives
 

@@ -1,4 +1,4 @@
-# Chapter 20 - Principal Engineer Leadership & Architecture Decisions
+# Chapter 30 - Principal Engineer Leadership Architecture Decisions
 
 ## Learning Objectives
 

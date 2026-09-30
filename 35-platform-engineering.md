@@ -1,4 +1,4 @@
-# Chapter 35 - Platform Engineering Masterclass
+# Chapter 35 - Platform Engineering
 
 ## Learning Objectives
 

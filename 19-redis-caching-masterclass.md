@@ -1,4 +1,4 @@
-# Chapter 15 - Redis & Caching Masterclass (Advanced Tech Lead Edition)
+# Chapter 19 - Redis Caching Masterclass
 
 ## Learning Objectives
 

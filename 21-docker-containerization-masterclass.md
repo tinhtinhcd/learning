@@ -1,4 +1,4 @@
-# Chapter 17 - Docker & Containerization Masterclass (Advanced Tech Lead Edition)
+# Chapter 21 - Docker Containerization Masterclass
 
 ## Learning Objectives
 

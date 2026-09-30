@@ -1,4 +1,4 @@
-# Chapter 18 - Microservices Architecture Masterclass (Advanced Tech Lead Edition)
+# Chapter 22 - Microservices Architecture Masterclass
 
 ## Learning Objectives
 

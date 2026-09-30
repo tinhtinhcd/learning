@@ -1,4 +1,4 @@
-# Chapter 12.1 - Hibernate Advanced Internals (Architect Edition)
+# Chapter 17 - Hibernate Advanced Internals
 
 ## 1. Hibernate Architecture Deep Dive
 

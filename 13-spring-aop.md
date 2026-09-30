@@ -1,4 +1,4 @@
-# Chapter 10 - Spring AOP (Complete Senior Edition)
+# Chapter 13 - Spring AOP
 
 ## Learning Objectives
 

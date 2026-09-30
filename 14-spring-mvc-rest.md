@@ -1,4 +1,4 @@
-# Chapter 11 - Spring MVC & REST (Complete Senior Edition)
+# Chapter 14 - Spring MVC REST
 
 ## Learning Objectives
 

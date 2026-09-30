@@ -1,4 +1,4 @@
-# Chapter 16 - Security Masterclass (Advanced Tech Lead Edition)
+# Chapter 20 - Security Masterclass
 
 ## Learning Objectives
 

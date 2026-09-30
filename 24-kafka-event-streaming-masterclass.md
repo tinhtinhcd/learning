@@ -1,4 +1,4 @@
-# Chapter 16 - Kafka & Event Streaming (Principal Engineer Edition)
+# Chapter 24 - Kafka Event Streaming Masterclass
 
 ## Learning Objectives
 

@@ -1,4 +1,4 @@
-# Chapter 19 - System Design Interview Masterclass (Principal Engineer Edition)
+# Chapter 25 - System Design Interview Masterclass
 
 ## Learning Objectives
 

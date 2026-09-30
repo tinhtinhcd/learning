@@ -1,4 +1,4 @@
-# Chapter 5 - JVM Architecture (Senior Java Backend Deep Dive)
+# Chapter 5 - JVM Architecture
 
 ## Learning Objectives
 

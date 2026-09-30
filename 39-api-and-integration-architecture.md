@@ -1,4 +1,4 @@
-# Chapter 39 - API & Integration Architecture Enterprise Edition
+# Chapter 39 - API And Integration Architecture
 
 ## Learning Objectives
 

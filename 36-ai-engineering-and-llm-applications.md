@@ -1,4 +1,4 @@
-# Chapter 36 - AI Engineering and LLM Applications
+# Chapter 36 - AI Engineering And LLM Applications
 
 ## Learning Objectives
 
