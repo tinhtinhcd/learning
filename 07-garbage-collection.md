@@ -1,4 +1,4 @@
-# Chapter 6 - Garbage Collection (Complete Edition)
+# Chapter 7 - Garbage Collection (Complete Edition)
 
 ## Sections Included
 
