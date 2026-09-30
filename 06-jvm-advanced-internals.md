@@ -1,4 +1,4 @@
-# Chapter 5.1 - Advanced JVM Internals
+# Chapter 6 - Advanced JVM Internals
 
 ## Learning Objectives
 
